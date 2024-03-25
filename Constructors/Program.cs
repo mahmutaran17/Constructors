@@ -6,53 +6,23 @@ using System.Threading.Tasks;
 
 namespace Constructors
 {
-     class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            IPersonManager personManager = new CustomerManager();
-            personManager.Add();
-
-            IPersonManager employeeManager = new EmployeeManager();
-            employeeManager.Add();
+            List<string> sehirler = new List<string>();
+            sehirler.Add("Ankara");
+        }
 
 
-        }        
 
     }
 
-    interface IPersonManager
-    {
-        void Add();
-        void Update();
-        
-    }
-
-    class CustomerManager : IPersonManager
+    class MyList
     {
         public void Add()
         {
-            //musteri ekleme kodlari yazilir
-            Console.WriteLine("müsteri eklendi");
 
-        }
-
-        public void Update()
-        {
-
-        }
-    }
-
-    class EmployeeManager : IPersonManager
-    {
-        public void Add()
-        {
-            Console.WriteLine("personel eklendi");
-        }
-
-        public void Update()
-        {
-            Console.WriteLine("personel güncellendi");
         }
     }
 
